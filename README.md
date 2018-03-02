@@ -4,7 +4,7 @@ Valida dígitos de verificação de número de processo no padrão do Conselho N
 ```Go
   var err error
 
-  if err = Valida(); err!=nil {
+  if err = Valida("numero do CNJ"); err!=nil {
     if err == ErrInvalidNumber {
       // Trata numeros inválidos
     } else if err == ErrInvalidDigit {
