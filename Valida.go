@@ -62,3 +62,13 @@ func Valida(num string) error {
 }
 
 
+// Remove todos os caracteres diferentes de dígitos e insere zeros à esquerda para
+// garantir que o número tenha 20 digitos
+// Não faz validação do número, assumindo que o número fornecido já esteja validado
+func Normaliza(num string) string {
+	var n uint
+	fmt.Sscanf(reCnj.ReplaceAllString(num, ""),"%d",&n)
+	return fmt.Sprintf("%020d", n)
+}
+
+
